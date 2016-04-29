@@ -100,7 +100,7 @@ font:
   # The `size` option use `px` as unit
   logo:
     external: true
-    family:
+    family: Lobster
     size:
 
   # Font settings for <code> and code blocks.
