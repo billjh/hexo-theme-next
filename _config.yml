@@ -104,7 +104,7 @@ font:
     size:
 
   # Font settings for <code> and code blocks.
-  code:
+  codes:
     external: true
     family:
 
