@@ -16,7 +16,10 @@ rss:
 # Specify the date when the site was setup
 #since: 2015
 
-
+# Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
+# See: https://support.google.com/webmasters/answer/139066
+# Tips: Before you open this tag, remeber set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
+canonical: true
 
 
 # ---------------------------------------------------------------
@@ -289,6 +292,13 @@ facebook_sdk:
   like_button:  #true
   webmaster:    #true
 
+# Facebook comments plugin
+# This plugin depends on Facebook SDK.
+# If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
+facebook_comments_plugin:
+  enable: false
+  num_of_posts: 10
+
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
@@ -348,22 +358,33 @@ vendors:
   jquery:
 
   # Internal version: 2.1.5
+  # http://fancyapps.com/fancybox/
   fancybox:
+  fancybox_css:
 
   # Internal version: 1.0.6
+  # https://github.com/ftlabs/fastclick
   fastclick:
 
   # Internal version: 1.9.7
+  # https://github.com/tuupola/jquery_lazyload
   lazyload:
 
   # Internal version: 1.2.1
+  # http://VelocityJS.org
   velocity:
 
   # Internal version: 1.2.1
+  # http://VelocityJS.org
   velocity_ui:
 
   # Internal version: 0.7.9
+  # https://faisalman.github.io/ua-parser-js/
   ua_parser:
+
+  # Internal version: 4.4.0
+  # http://fontawesome.io/
+  fontawesome:
 
 
 # Assets
