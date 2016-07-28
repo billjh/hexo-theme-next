@@ -14,6 +14,11 @@
     <span class="archive-page-counter">
       {% set cheers %}
       {% set posts_length = site.posts.length %}
+      {% for post in page.posts %}
+        {% if post.type === 'quote' %}
+          {% set posts_length = posts_length - 1 %}
+        {% endif %}
+      {% endfor %}
       {% if posts_length > 210 %} {% set cheers = 'excellent' %}
         {% elif posts_length > 130 %} {% set cheers = 'great' %}
         {% elif posts_length > 80 %} {% set cheers = 'good' %}
@@ -22,7 +27,7 @@
       {% else %}
         {% set cheers = 'um' %}
       {% endif %}
-      {{ __('cheers.' + cheers) }}! {{ _p("counter.archive_posts", site.posts.length) }} {{ __('keep_on') }}
+      {{ __('cheers.' + cheers) }}! {{ _p("counter.archive_posts", posts_length) }} {{ __('keep_on') }}
     </span>
 
     {% for post in page.posts %}
@@ -39,7 +44,7 @@
       {% endif %}
       {# endshow #}
 
-      {{ post_template.render(post) }}
+      {% if post.type !== 'quote' %} {{ post_template.render(post) }} {% endif %}
 
     {% endfor %}
 
